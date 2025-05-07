@@ -1,6 +1,7 @@
 import styles from "./App.module.css";
 import {Header} from "./components/Header";
 import {NewToDoForm} from "./components/NewToDoForm";
+import {ToDoList} from "./components/ToDoList";
 
 export function App() {
   return (
@@ -9,6 +10,7 @@ export function App() {
 
       <main className={styles.container}>
         <NewToDoForm />
+        <ToDoList />
       </main>
     </>
   );
