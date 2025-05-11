@@ -2,7 +2,7 @@
   "name": "ignite-todo",
   "private": false,
   "version": "0.0.0",
-  "description": "Primeiro desafio da Trilha ReactJS do curso Ignite da RocketSeat.",
+  "description": "Primeiro desafio da Trilha ReactJS do curso Ignite da RocketSeat, focado em criar uma aplicação de lista de tarefas com funcionalidades completas.",
   "author": {
     "name": "Robson H. Rodrigues",
     "url": "https://github.com/Robson16"

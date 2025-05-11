@@ -1,11 +1,12 @@
-import {useState} from "react";
+import {useState, type FormEvent} from "react";
 import styles from "./App.module.css";
 import {Header} from "./components/Header";
 import {NewToDoForm} from "./components/NewToDoForm";
-import type {ToDoData} from "./components/ToDo";
+import {type ToDoData} from "./components/ToDo";
 import {ToDoList} from "./components/ToDoList";
 
 export function App() {
+  const [newTodo, setNewTodo] = useState("");
   const [todos, setTodos] = useState<ToDoData[]>([
     {
       id: "3f07d04f-31d6-4fda-a133-2e15c1d9d629",
@@ -39,6 +40,27 @@ export function App() {
     },
   ]);
 
+  function handleNewTodoFormChange(newTodo: string) {
+    setNewTodo(newTodo);
+  }
+
+  function handleNewTodoFormSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (newTodo.trim() === "") {
+      return;
+    }
+
+    const newTodoData = {
+      id: crypto.randomUUID(),
+      content: newTodo,
+      isDone: false,
+    };
+
+    setTodos((prevTodos) => [newTodoData, ...prevTodos]);
+    setNewTodo("");
+  }
+
   function handleToggleTodo(id: string) {
     const targetTodo = todos.find((todo) => todo.id === id);
     const othersToDo = todos.filter((todo) => todo.id !== id);
@@ -64,7 +86,11 @@ export function App() {
     <>
       <Header />
       <main className={styles.container}>
-        <NewToDoForm />
+        <NewToDoForm
+          newTodoValue={newTodo}
+          onNewTodoFormChange={handleNewTodoFormChange}
+          onNewTodoFormSubmit={handleNewTodoFormSubmit}
+        />
         <ToDoList
           todosData={todos}
           onToggleTodo={handleToggleTodo}
