@@ -27,6 +27,11 @@
   color: var(--white);
 }
 
+.todo.done .checkbox:hover {
+  background-color: var(--purple-500);
+  border-color: var(--purple-500);
+}
+
 .checkbox {
   display: flex;
   align-items: center;
@@ -41,11 +46,6 @@
 
 .checkbox:hover {
   border-color: var(--blue-700);
-}
-
-.checkbox.checked:hover {
-  background-color: var(--purple-500);
-  border-color: var(--purple-500);
 }
 
 .content {
