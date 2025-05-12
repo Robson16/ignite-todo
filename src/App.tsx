@@ -1,9 +1,9 @@
-import {useState, type FormEvent} from "react";
+import { useState, type FormEvent } from "react";
 import styles from "./App.module.css";
-import {Header} from "./components/Header";
-import {NewToDoForm} from "./components/NewToDoForm";
-import {type ToDoData} from "./components/ToDo";
-import {ToDoList} from "./components/ToDoList";
+import { Header } from "./components/Header";
+import { NewToDoForm } from "./components/NewToDoForm";
+import { type ToDoData } from "./components/ToDo";
+import { ToDoList } from "./components/ToDoList";
 
 export function App() {
   const [newTodo, setNewTodo] = useState("");

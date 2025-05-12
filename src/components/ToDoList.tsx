@@ -1,5 +1,5 @@
 import clipboard from "../assets/clipboard.svg";
-import {ToDo, type ToDoData} from "./ToDo";
+import { ToDo, type ToDoData } from "./ToDo";
 import styles from "./ToDoList.module.css";
 
 interface ToLoListProps {

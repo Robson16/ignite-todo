@@ -1,4 +1,4 @@
-import {Check, Trash} from "@phosphor-icons/react";
+import { Check, Trash } from "@phosphor-icons/react";
 import styles from "./ToDo.module.css";
 
 export interface ToDoData {
@@ -13,7 +13,7 @@ interface ToDoProps {
   onDeleteTodo: (id: string) => void;
 }
 
-export function ToDo({todoData, onDeleteTodo, onToggleTodo}: ToDoProps) {
+export function ToDo({ todoData, onDeleteTodo, onToggleTodo }: ToDoProps) {
   return (
     <div className={`${styles.todo} ${todoData.isDone ? styles.done : ""}`}>
       <span

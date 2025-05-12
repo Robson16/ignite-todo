@@ -1,5 +1,5 @@
-import {PlusCircle} from "@phosphor-icons/react";
-import {type FormEvent} from "react";
+import { PlusCircle } from "@phosphor-icons/react";
+import { type FormEvent } from "react";
 import styles from "./NewToDoForm.module.css";
 
 interface NewToDoFormProps {
